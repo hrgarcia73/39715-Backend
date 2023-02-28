@@ -5,7 +5,25 @@
 		"price": 105.7,
 		"thumbnail": "producto1.png",
 		"code": "ABC123",
-		"stock": 35,
+		"stock": 45,
 		"id": 1
+	},
+	{
+		"title": "Producto2",
+		"description": "otro producto",
+		"price": 105.7,
+		"thumbnail": "producto2.png",
+		"code": "CAB456",
+		"stock": 5,
+		"id": 2
+	},
+	{
+		"title": "Producto3",
+		"description": "otro producto mas",
+		"price": 105.7,
+		"thumbnail": "producto3.png",
+		"code": "DEF789",
+		"stock": 15,
+		"id": 3
 	}
 ]

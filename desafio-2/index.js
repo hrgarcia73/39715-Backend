@@ -7,36 +7,36 @@ import ProductManager from './ProductManager.js';
 const productManager = new ProductManager('./files/products.json');
 
 //llamada al metodo getProducts() esperando el objeto vacio.
-console.log("llamada a getProducts() pro primera vez")
+//console.log(await productManager.getProducts());
 
 //Llamada al metodo addProduct para cargar el primer producto.
+/*
 const newProduct = {
+    title: "Producto3",
+    description: "otro producto mas",
+    price: 105.7,
+    thumbnail: "producto3.png",
+    code: "DEF789",
+    stock: 15,
+}
+console.log(await productManager.addProduct(newProduct));
+*/
+
+//Llamada a getProducts() esperando el objeto con el producto creado.
+//console.log(await productManager.getProducts());
+
+//llamada a getProductById() con id valido.
+//console.log(await productManager.getProductById(1));
+
+const updateProduct = {
     title: "Producto1",
     description: "un producto",
     price: 105.7,
     thumbnail: "producto1.png",
     code: "ABC123",
-    stock: 35,
+    stock: 45,
 }
-console.log(await productManager.addProduct(newProduct));
+console.log(await productManager.updateProduct(1, updateProduct));
 
-
-//Llamada a getProducts() esperando el objeto con el producto creado.
-console.log(await productManager.getProducts());
-
-//llamada a getProductById() con id valido.
-console.log(await productManager.getProductById(1));
-
-/*
-//Llamada al metodo addProduct para cargar el segundo producto esperando 
-//el mensaje de error por tener el mismo valor en el campo code.
-console.log(await productManager.addProduct("Producto1","un producto" ,105.7,"producto1.png","ABC123",35));
-
-//Agrego segundo producto
-console.log(await productManager.addProduct("Producto2","otro producto" ,26.5,"producto2.png","ABC126",22));
-
-
-
-//llamada a getProductById() con id no valido para que de error.
-console.log(await productManager.getProductById(3));
-*/
+//Llamada a deleteProduct(id) esperando el objeto eliminado.
+//console.log(await productManager.deleteProduct(3));
