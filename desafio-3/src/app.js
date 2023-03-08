@@ -2,9 +2,9 @@
     DESAFIO 3 - SERVIDOR EXPRESS
     Se trata de un servidor express simple.
 
-    /productos : muestra todos los productos que hay en el archivo de productos.
+    /products : muestra todos los productos que hay en el archivo de productos.
 
-    /productoRandom : muestra un producto cuyo id fue generado al azar.
+    /products/:id : muestra un producto cuyo id es pasado por parámetro.
 */
 //importamos la clase contenedor
 import ProductManager from '../ProductManager.js';
@@ -19,7 +19,7 @@ const productManager = new ProductManager('./files/products.json');
 
 //Instacio el objeto clase contenedor
 app.get('/', (req, res) => {
-    res.send("Desafío 3 - /products, devuelve todos los productos.\n  /products?limit=x devuelve los primeros (x) items \n y /product/z, devuelve el producto cuyo id=(z)")
+    res.send("Desafío 3 - /products, devuelve todos los productos.\n  /products?limit=x devuelve los primeros (x) items \n y /products/z, devuelve el producto cuyo id=(z)")
   })
 
 app.get('/products', async(req, res) => {
@@ -39,7 +39,7 @@ app.get('/products', async(req, res) => {
   
 })
 
-app.get('/product/:id', async(req, res) => { 
+app.get('/products/:id', async(req, res) => { 
     //Tomo el id de los parámetros
     //Convierto a numero para que no se me queje la clase
     let productId = Number(req.params.id); 
